@@ -6,7 +6,7 @@ include "base.thrift"
 typedef string URL
 
 struct WebhookMessage {
-    1: required base.WebHookID          webhook_id
+    1: required base.WebhookID          webhook_id
     2: required base.ID                 source_id
     3: required base.EventID            event_id
     4: required base.EventID            parent_event_id
@@ -17,6 +17,8 @@ struct WebhookMessage {
     9: required binary                  request_body
     10: optional base.Count             retry_count
 }
+
+exception WebhookNotFound {}
 
 service WebhookMessageService {
 
