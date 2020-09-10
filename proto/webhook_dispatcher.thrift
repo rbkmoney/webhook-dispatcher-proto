@@ -25,5 +25,5 @@ service WebhookMessageService {
     /**
     * Переотправить сообщение, отправка которого провалилась
     **/
-    void Resend(1: base.WebhookID webhook_id, 2: base.ID source_id, base.EventID event_id) throws (1: WebhookNotFound ex)
+    void Resend(1: base.WebhookID webhook_id, 2: base.ID source_id, 3: base.EventID event_id) throws (1: WebhookNotFound ex)
 }
